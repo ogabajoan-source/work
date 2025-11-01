@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthy Life | Home</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <style>
+    /* --- RESET --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      color: #333;
+      background-color: #f9fafc;
+    }
+
+    /* --- NAVBAR --- */
+    header {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: 700;
+      color: #1abc9c;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #1abc9c;
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      color: #fff;
+      font-size: 3em;
+      font-weight: 700;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .hero p {
+      color: #f1f1f1;
+      margin: 20px 0;
+      font-size: 1.2em;
+      max-width: 700px;
+    }
+
+    .btn {
+      background: #1abc9c;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #16a085;
+    }
+
+    /* --- FEATURES --- */
+    .features {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .feature {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .feature i {
+      font-size: 40px;
+      color: #1abc9c;
+      margin-bottom: 15px;
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+      font-size: 1.3em;
+      color: #333;
+    }
+
+    .feature p {
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      background: #1abc9c;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      font-size: 0.9em;
+    }
+
+    /* --- RESPONSIVE MENU (MOBILE) --- */
+    .menu-icon {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .menu-icon {
+        display: block;
+        color: #1abc9c;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">HealthyLife</div>
+      <div class="menu-icon" id="menu-icon"><i class='bx bx-menu'></i></div>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Live Better. Stay Healthy.</h1>
+    <p>Your health is your greatest wealth. Discover tips, advice, and resources to live a balanced and happy life.</p>
+    <a href="about.html"><button class="btn">Learn More</button></a>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <i class='bx bx-dumbbell'></i>
+      <h3>Exercise Regularly</h3>
+      <p>Stay active to boost your energy, strengthen your body, and improve your mood every day.</p>
+    </div>
+
+    <div class="feature">
+      <i class='bx bx-apple'></i>
+      <h3>Eat Healthy</h3>
+      <p>Fuel your body with nutritious meals rich in vitamins, minerals, and natural goodness.</p>
+    </div>
+
+    <div class="feature">
+      <i class='bx bx-brain'></i>
+      <h3>Mind Wellness</h3>
+      <p>Take care of your mental health through meditation, rest, and positive habits.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 HealthyLife | Designed with ❤️ by Joan</p>
+  </footer>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+    menuIcon.onclick = () => {
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

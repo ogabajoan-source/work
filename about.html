@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthy Life | About</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #f9fafc;
+      color: #333;
+    }
+
+    /* --- NAVBAR --- */
+    header {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: 700;
+      color: #1abc9c;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #1abc9c;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* --- ABOUT SECTION --- */
+    .about {
+      max-width: 1200px;
+      margin: 120px auto 80px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      padding: 0 20px;
+    }
+
+    .about-img {
+      flex: 1;
+      min-width: 320px;
+      text-align: center;
+    }
+
+    .about-img img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .about-content {
+      flex: 1;
+      min-width: 320px;
+    }
+
+    .about-content h2 {
+      font-size: 2.2em;
+      color: #1abc9c;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      font-size: 1.05em;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .about-content .btn {
+      background: #1abc9c;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .about-content .btn:hover {
+      background: #16a085;
+    }
+
+    /* --- VALUES SECTION --- */
+    .values {
+      background: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .values h3 {
+      color: #1abc9c;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+
+    .values p {
+      color: #555;
+      font-size: 1em;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      background: #1abc9c;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .menu-icon {
+        display: block;
+        color: #1abc9c;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">HealthyLife</div>
+      <div class="menu-icon" id="menu-icon"><i class='bx bx-menu'></i></div>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="about">
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&fit=crop&w=800&q=80" alt="Healthy lifestyle">
+    </div>
+    <div class="about-content">
+      <h2>About HealthyLife</h2>
+      <p>At <strong>HealthyLife</strong>, we believe that good health is the foundation of happiness and productivity. Our mission is to inspire individuals to live healthier, more balanced lives through fitness, nutrition, and mindfulness.</p>
+      <p>We share expert advice, wellness tips, and daily motivation to help you make smarter choices for your body and mind — one step at a time.</p>
+      <button class="btn" onclick="window.location.href='contact.html'">Get in Touch</button>
+    </div>
+  </section>
+
+  <section class="values">
+    <h3>Our Core Values</h3>
+    <p>We stand by integrity, positivity, and commitment to well-being. HealthyLife is not just a website — it’s a movement toward self-care and better living. We aim to educate, empower, and encourage every person to take charge of their health journey.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 HealthyLife | Promoting a Better You</p>
+  </footer>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+    menuIcon.onclick = () => {
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
